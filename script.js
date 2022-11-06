@@ -47,6 +47,90 @@ function myFunction() {
   document.getElementById("demo").innerHTML = text;
 }
 
+function secondFunction() {
+  if (document.getElementById("lowercase").checked == true) {
+    text = "yes include lowercase letters in password";
+  } else if (document.getElementById("lowercaseNo").checked == true) {
+    text = "no do not include lowercase letters in password";
+  } else {
+    text = "no input selected";
+  }
+  document.getElementById("demoTwo").innerHTML = text;
+}
+
+function thirdFunction() {
+  if (document.getElementById("uppercase").checked == true) {
+    text = "yes include uppercase letters in password";
+  } else if (document.getElementById("uppercaseNo").checked == true) {
+    text = "no do not include uppercase letters in password";
+  } else {
+    text = "no input selected";
+  }
+  document.getElementById("demoThree").innerHTML = text;
+}
+
+function fourthFunction() {
+  if (document.getElementById("numbers").checked == true) {
+    text = "yes include numbers in password";
+  } else if (document.getElementById("numbersNo").checked == true) {
+    text = "no do not include numbers in password";
+  } else {
+    text = "no input selected";
+  }
+  document.getElementById("demoFour").innerHTML = text;
+}
+
+function fifthFunction() {
+  if (document.getElementById("special").checked == true) {
+    text = "yes include special characters in password";
+  } else if (document.getElementById("specialNo").checked == true) {
+    text = "no do not include special characters in password";
+  } else {
+    text = "no input selected";
+  }
+  document.getElementById("demoFive").innerHTML = text;
+}
+
+/* function secondFunction() {
+  let x = document.getElementByName("lowercase").value;
+  switch(x) {
+    case "yes":
+      text = "yes include uppercase letters";
+      break;
+    case "no":
+      text = "no do not include lowercase letters";
+      break;
+    default: 
+      text = "no value selected";
+      break;
+  }
+  document.getElementById("demoTwo").innerHTML = text;
+} */ 
+
+
+/* function secondFunction() {
+  let x = document.getElementsByName("lowercase").value;
+  if (x == "no") {
+    text = "no do not include lowercase letters in password";
+  } else {
+    text = "yes include lowercase letters in password";
+  };
+  document.getElementById("demoTwo").innerHTML = text;
+}; */
+
+/* function secondFunction() {
+  let x = document.getElementById("lowercase").value;
+  let y = document.getElementById("lowercaseNo").value;
+  let text;
+  if (y === "no") {
+    text = "yes include lowercase letters in password";
+  } else if (x === "yes") {
+    text = "no do not include lowercase letters in password";
+  } else {
+    text = "no value selected"
+  }
+   document.getElementById("demoTwo").innerHTML = text;
+  } */
 
 /* WORKING CODE 
  function validateForm() {
