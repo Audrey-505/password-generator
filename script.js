@@ -30,13 +30,25 @@ generateBtn.addEventListener("click", writePassword);
 
 
 
+function toggleCriteria() {
+  var criteriaOptions = document.getElementById("criteriaOn");
+  let displaySetting = criteriaOptions.style.display;
+
+  if (displaySetting == "block") {
+    criteriaOptions.style.display = "none";
+  } else {
+    criteriaOptions.style.display = "block";
+  }
+}
 
 
 
+// working on the hidding criteria until button is clicked 
 
+  function myFunction() {
+  // removable 
 
-
-function myFunction() {
+  // above removeable 
   let x = document.getElementById("numb").value;
   let text;
   if (isNaN(x) || x < 8 || x > 128) {
@@ -45,9 +57,7 @@ function myFunction() {
     text = "OK";
   }
   document.getElementById("demo").innerHTML = text;
-}
-
-function secondFunction() {
+  
   if (document.getElementById("lowercase").checked == true) {
     text = "yes include lowercase letters in password";
   } else if (document.getElementById("lowercaseNo").checked == true) {
@@ -56,9 +66,7 @@ function secondFunction() {
     text = "no input selected";
   }
   document.getElementById("demoTwo").innerHTML = text;
-}
 
-function thirdFunction() {
   if (document.getElementById("uppercase").checked == true) {
     text = "yes include uppercase letters in password";
   } else if (document.getElementById("uppercaseNo").checked == true) {
@@ -67,9 +75,7 @@ function thirdFunction() {
     text = "no input selected";
   }
   document.getElementById("demoThree").innerHTML = text;
-}
-
-function fourthFunction() {
+  
   if (document.getElementById("numbers").checked == true) {
     text = "yes include numbers in password";
   } else if (document.getElementById("numbersNo").checked == true) {
@@ -78,9 +84,7 @@ function fourthFunction() {
     text = "no input selected";
   }
   document.getElementById("demoFour").innerHTML = text;
-}
-
-function fifthFunction() {
+ 
   if (document.getElementById("special").checked == true) {
     text = "yes include special characters in password";
   } else if (document.getElementById("specialNo").checked == true) {
@@ -89,9 +93,66 @@ function fifthFunction() {
     text = "no input selected";
   }
   document.getElementById("demoFive").innerHTML = text;
+
+  if (document.getElementById("special").checked == true) {
+    text = "yes include special characters in password";
+  } else if (document.getElementById("specialNo").checked == true) {
+    text = "no do not include special characters in password";
+  } else {
+    text = "no input selected";
+  }
+  document.getElementById("demoFive").innerHTML = text;  
 }
 
-/* function secondFunction() {
+
+/* All the functions such as secondFunction thirdFunction etc were refactored into myFunction
+
+   function secondFunction() {
+  if (document.getElementById("lowercase").checked == true) {
+    text = "yes include lowercase letters in password";
+  } else if (document.getElementById("lowercaseNo").checked == true) {
+    text = "no do not include lowercase letters in password";
+  } else {
+    text = "no input selected";
+  }
+  document.getElementById("demoTwo").innerHTML = text;
+} */
+
+/* function thirdFunction() {
+  if (document.getElementById("uppercase").checked == true) {
+    text = "yes include uppercase letters in password";
+  } else if (document.getElementById("uppercaseNo").checked == true) {
+    text = "no do not include uppercase letters in password";
+  } else {
+    text = "no input selected";
+  }
+  document.getElementById("demoThree").innerHTML = text;
+} */
+
+/* function fourthFunction() {
+  if (document.getElementById("numbers").checked == true) {
+    text = "yes include numbers in password";
+  } else if (document.getElementById("numbersNo").checked == true) {
+    text = "no do not include numbers in password";
+  } else {
+    text = "no input selected";
+  }
+  document.getElementById("demoFour").innerHTML = text;
+} */
+
+/* function fifthFunction() {
+  if (document.getElementById("special").checked == true) {
+    text = "yes include special characters in password";
+  } else if (document.getElementById("specialNo").checked == true) {
+    text = "no do not include special characters in password";
+  } else {
+    text = "no input selected";
+  }
+  document.getElementById("demoFive").innerHTML = text;
+} */
+
+/* why didnt it work?
+   function secondFunction() {
   let x = document.getElementByName("lowercase").value;
   switch(x) {
     case "yes":

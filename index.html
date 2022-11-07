@@ -25,55 +25,60 @@
           ></textarea>
         </div>
         <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
+          <button onclick="toggleCriteria()" id="generate" class="btn">Generate Password</button>
         </div>
       </div>
     </div>
-    <div>
+
+    <div class="" id="criteriaOn">
+      <div>
       <p>Please input a number between 8 and 128:</p>
-
       <input id="numb">
-
       <button type="button" onclick="myFunction()">Submit</button>
-
       <p id="demo"></p>
-    </div>
-    <div>
+      </div>
+
+      <div>
       <p>Inlcude Lowercase Letters?</p>
       <input type="radio" id="lowercase" name="lowercase" value="yes" required="required">
       <label for="yes">Yes</label><br>
       <input type="radio" id="lowercaseNo" name="lowercase" value="no">
       <label for="no">No</label><br>
-      <button type="button" onclick="secondFunction()">Submit</button>
+      <button type="button" onclick="myFunction()">Submit</button>
       <p id="demoTwo"></p>
-    </div>
-    <div>
+     </div>
+
+     <div>
       <p>Inlcude Uppercase Letters?</p>
       <input type="radio" id="uppercase" name="uppercase" value="yes" required="required">
       <label for="yes">Yes</label><br>
       <input type="radio" id="uppercaseNo" name="uppercase" value="no">
       <label for="no">No</label><br>
-      <button type="button" onclick="thirdFunction()">Submit</button>
+      <button type="button" onclick="myFunction()">Submit</button>
       <p id="demoThree"></p>
-    </div>
-    <div>
+     </div>
+
+     <div>
       <p>Inlcude Numbers?</p>
       <input type="radio" id="numbers" name="numbers" value="yes" required="required">
       <label for="yes">Yes</label><br>
       <input type="radio" id="numbersNo" name="numbers" value="no">
       <label for="">No</label><br>
-      <button type="button" onclick="fourthFunction()">Submit</button>
+      <button type="button" onclick="myFunction()">Submit</button>
       <p id="demoFour"></p>
-    </div>
-    <div>
+     </div>
+
+     <div>
       <p>Special Characters?</p>
       <input type="radio" id="special" name="special" value="yes">
       <label for="yes">Yes</label><br>
       <input type="radio" id="specialNo" name="special" value="no">
       <label for="no">No</label><br>
-      <button type="button" onclick="fifthFunction()">Submit</button>
+      <button type="button" onclick="myFunction()">Submit</button>
       <p id="demoFive"></p>
+     </div>
     </div>
+
     <!-- <div>
       <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
         Name: <input type="text" name="fname">
