@@ -25,19 +25,23 @@
           ></textarea>
         </div>
         <div class="card-footer">
-          <button onclick="toggleCriteria()" id="generate" class="btn">Generate Password</button>
+          <button type="submit" onclick="generatePassword()" id="generate" class="btn">Generate Password</button>
+          <button onclick="toggleCriteria()" id="generateCriteria" class="btn">Show Criteria</button>
         </div>
       </div>
     </div>
 
+   <form id="passwordForm">
     <div class="" id="criteriaOn">
+      <h3>Please select your password criteria</h3>
       <div>
       <p>Please input a number between 8 and 128:</p>
-      <input id="numb">
+      <input id="numb" type="number" value=10>
       <button type="button" onclick="myFunction()">Submit</button>
       <p id="demo"></p>
       </div>
-
+  
+      <h3>Please select character types:</h3>
       <div>
       <p>Inlcude Lowercase Letters?</p>
       <input type="radio" id="lowercase" name="lowercase" value="yes" required="required">
@@ -78,6 +82,7 @@
       <p id="demoFive"></p>
      </div>
     </div>
+   </form>
 
     <!-- <div>
       <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
