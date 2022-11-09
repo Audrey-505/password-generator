@@ -4,19 +4,15 @@
 var lowercaseArray = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 var uppercaseArray = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 var numbersArray = [0,1,2,3,4,5,6,7,8,9]
-var specialArray = ["~","!","@","#","$","%","^","&","*","(",")","_","+","-","=","{","}","[","]",":",";","?",",","."]
+var specialArray = ["~","!","@","#","$","%","&","*"]
 
 
+/*
 var lengthPrompt = prompt('How long do you want your password to be? (Please select a number 8-128)')
 var lowercasePrompt = prompt('Include lowercase letters? Yes or no')
 var uppercasePrompt = prompt('Include uppercase letters? Yes or no')
 var numbersPrompt = prompt('Include numbers? Yes or no')
 var specialPrompt = prompt('Include special characters? Yes or no')
-
-// code above and if below needs to be in the same function
-//if (!lengthPrompt || isNaN(lengthPrompt)) {
- // return;
-//}
 
 lengthPrompt = parseInt(lengthPrompt)
 lowercasePrompt = lowercasePrompt.toUpperCase();
@@ -24,7 +20,6 @@ uppercasePrompt = uppercasePrompt.toUpperCase();
 numbersPrompt = numbersPrompt.toUpperCase();
 specialPrompt = specialPrompt.toUpperCase();
 
-/*
 if (lengthPrompt >= 8 && lengthPrompt <= 128){
   var correctLength = lengthPrompt 
 }
@@ -43,7 +38,6 @@ if (specialPrompt === 'YES') {
   userChoices.concat(specialArray)
 }
 
-
 for (let i = 0; i < correctLength.length; i++) {
   userChoices += Math.floor(Math.random() * correctLength)
 
@@ -51,12 +45,27 @@ for (let i = 0; i < correctLength.length; i++) {
 */
 
 function generatePassword() {
+
+var lengthPrompt = prompt('How long do you want your password to be? (Please select a number 8-128)')
+var lowercasePrompt = prompt('Include lowercase letters? Yes or no')
+var uppercasePrompt = prompt('Include uppercase letters? Yes or no')
+var numbersPrompt = prompt('Include numbers? Yes or no')
+var specialPrompt = prompt('Include special characters? Yes or no')
+
+lengthPrompt = parseInt(lengthPrompt)
+lowercasePrompt = lowercasePrompt.toUpperCase();
+uppercasePrompt = uppercasePrompt.toUpperCase();
+numbersPrompt = numbersPrompt.toUpperCase();
+specialPrompt = specialPrompt.toUpperCase();
+
   if (!lengthPrompt || isNaN(lengthPrompt)) {
     return;
   }
 
   if (lengthPrompt >= 8 && lengthPrompt <= 128){
     console.log(lengthPrompt) 
+  } else {
+    return;
   }
   
   var userChoices = [];
@@ -77,7 +86,7 @@ function generatePassword() {
   for (let i = 0; i < userChoices.length; i++) {
     userChoices += Math.floor(Math.random() * lengthPrompt)
   } 
-
+  console.log(userChoices)
 }
 
 // Get references to the #generate element
@@ -95,13 +104,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword)
-
-
-
-/* userChoices = []
-if (lowercaseArray) {
-  userChoices.concat(uppercaseArray)
-}
-if (uppercaseArray) {
-
-} */
