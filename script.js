@@ -20,16 +20,9 @@ uppercasePrompt = uppercasePrompt.toUpperCase();
 numbersPrompt = numbersPrompt.toUpperCase();
 specialPrompt = specialPrompt.toUpperCase();
 
-  if (!lengthPrompt || isNaN(lengthPrompt)) {
-    return;
-  }
-
-  if (lengthPrompt >= 8 && lengthPrompt <= 128){
-    console.log(lengthPrompt) 
-  } else {
-    return;
-  }
-  
+  /* if (lengthPrompt = null || isNaN(lengthPrompt) || lengthPrompt < 8 || lengthPrompt > 128 ) {
+    alert('not a valid number, please try again');
+  } */
   
   var userChoices = [];
   if (lowercasePrompt === 'YES') {
