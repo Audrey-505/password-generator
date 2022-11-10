@@ -20,9 +20,10 @@ uppercasePrompt = uppercasePrompt.toUpperCase();
 numbersPrompt = numbersPrompt.toUpperCase();
 specialPrompt = specialPrompt.toUpperCase();
 
-  /* if (lengthPrompt = null || isNaN(lengthPrompt) || lengthPrompt < 8 || lengthPrompt > 128 ) {
-    alert('not a valid number, please try again');
-  } */
+  if (lengthPrompt == null || isNaN(lengthPrompt) || lengthPrompt < 8 || lengthPrompt > 128 ) {
+    alert('Your first input was not a valid number, please try again and select a number 8-128');
+    return;
+  }
   
   var userChoices = [];
   if (lowercasePrompt === 'YES') {
