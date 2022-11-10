@@ -14,6 +14,10 @@ var uppercasePrompt = prompt('Include uppercase letters? Yes or no')
 var numbersPrompt = prompt('Include numbers? Yes or no')
 var specialPrompt = prompt('Include special characters? Yes or no')
 
+if (lowercasePrompt === null && uppercasePrompt === null && numbersPrompt === null && specialPrompt === null){
+  alert('At least one criteria must be selected')
+}
+
 lengthPrompt = parseInt(lengthPrompt)
 lowercasePrompt = lowercasePrompt.toUpperCase();
 uppercasePrompt = uppercasePrompt.toUpperCase();
@@ -23,6 +27,10 @@ specialPrompt = specialPrompt.toUpperCase();
   if (lengthPrompt == null || isNaN(lengthPrompt) || lengthPrompt < 8 || lengthPrompt > 128 ) {
     alert('Your first input was not a valid number, please try again and select a number 8-128');
     return;
+  }
+
+  if (!lowercasePrompt && !uppercasePrompt && !numbersPrompt && !specialPrompt){
+    alert('At least one criteria must be selected, please input "yes" for at least one criteria')
   }
   
   var userChoices = [];
@@ -41,7 +49,7 @@ specialPrompt = specialPrompt.toUpperCase();
   if (specialPrompt === 'YES') {
     userChoices = userChoices.concat(specialArray)
     console.log(userChoices)
-  }
+  }  
   
  for (let i = 0; i < lengthPrompt; i++){
   var shuffled = [...userChoices].sort(() => .5 - Math.random())
